@@ -31,7 +31,8 @@ class ViewController: UIViewController {
         
     }
     @IBAction func signUPButtonsTapped(_ sender: UIButton) {
-                basicAlert(title: "Comming soon!", message:"\nMeanwhile you can use: \nUsername: \(username) \n Password: \(password)")
+        let signUpVC = storyboard?.instantiateViewController(withIdentifier: "SingUpSBID") as! SignUpViewController
+        self.present(signUpVC, animated: true, completion: nil)
     }
     
     

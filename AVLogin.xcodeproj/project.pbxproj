@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		36CF977879327703EBB85FCE /* Pods_AVLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ADF5EDE9DEF34CCE90D139 /* Pods_AVLogin.framework */; };
+		96D64B7E237C4E730058BF72 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D64B7D237C4E730058BF72 /* SignUpViewController.swift */; };
+		96D64B83237C522E0058BF72 /* DesignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D64B82237C522E0058BF72 /* DesignButton.swift */; };
 		AC004A8D23735F980026880C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC004A8C23735F980026880C /* TableViewCell.swift */; };
 		AC004A8F23736F3E0026880C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC004A8E23736F3E0026880C /* InfoViewController.swift */; };
 		AC7EEEFB237C3B9300F4720C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC7EEEFA237C3B9300F4720C /* GoogleService-Info.plist */; };
@@ -25,6 +27,8 @@
 		0CE99BD45EE9881B7D4F9E07 /* Pods-AVLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVLogin.release.xcconfig"; path = "Target Support Files/Pods-AVLogin/Pods-AVLogin.release.xcconfig"; sourceTree = "<group>"; };
 		2A8C4575176A87DE3304D336 /* Pods-AVLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVLogin.debug.xcconfig"; path = "Target Support Files/Pods-AVLogin/Pods-AVLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		53ADF5EDE9DEF34CCE90D139 /* Pods_AVLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96D64B7D237C4E730058BF72 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		96D64B82237C522E0058BF72 /* DesignButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignButton.swift; sourceTree = "<group>"; };
 		AC004A8C23735F980026880C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		AC004A8E23736F3E0026880C /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		AC7EEEFA237C3B9300F4720C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 				ACA85E442373489F00CE088F /* TableViewController.swift */,
 				AC004A8C23735F980026880C /* TableViewCell.swift */,
 				AC004A8E23736F3E0026880C /* InfoViewController.swift */,
+				96D64B7D237C4E730058BF72 /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -95,6 +100,14 @@
 				AC7F4A202373F13800B929B5 /* Alert-Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		96D64B84237C53EF0058BF72 /* Designable */ = {
+			isa = PBXGroup;
+			children = (
+				96D64B82237C522E0058BF72 /* DesignButton.swift */,
+			);
+			path = Designable;
 			sourceTree = "<group>";
 		};
 		ACA85E2423731A2400CE088F = {
@@ -119,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				96279AEE237C36B800911572 /* Delegates */,
+				96D64B84237C53EF0058BF72 /* Designable */,
 				96279AEF237C36E200911572 /* Views */,
 				96279AF0237C36ED00911572 /* Controllers */,
 				96279AF1237C36F900911572 /* Extensions */,
@@ -135,7 +149,6 @@
 				2A8C4575176A87DE3304D336 /* Pods-AVLogin.debug.xcconfig */,
 				0CE99BD45EE9881B7D4F9E07 /* Pods-AVLogin.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -257,9 +270,11 @@
 			files = (
 				AC7F4A212373F13900B929B5 /* Alert-Ext.swift in Sources */,
 				AC004A8D23735F980026880C /* TableViewCell.swift in Sources */,
+				96D64B7E237C4E730058BF72 /* SignUpViewController.swift in Sources */,
 				ACA85E3523731A2400CE088F /* ViewController.swift in Sources */,
 				ACA85E3123731A2400CE088F /* AppDelegate.swift in Sources */,
 				ACA85E3323731A2400CE088F /* SceneDelegate.swift in Sources */,
+				96D64B83237C522E0058BF72 /* DesignButton.swift in Sources */,
 				AC004A8F23736F3E0026880C /* InfoViewController.swift in Sources */,
 				ACA85E452373489F00CE088F /* TableViewController.swift in Sources */,
 			);

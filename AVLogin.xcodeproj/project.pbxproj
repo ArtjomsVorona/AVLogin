@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36CF977879327703EBB85FCE /* Pods_AVLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ADF5EDE9DEF34CCE90D139 /* Pods_AVLogin.framework */; };
 		AC004A8D23735F980026880C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC004A8C23735F980026880C /* TableViewCell.swift */; };
 		AC004A8F23736F3E0026880C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC004A8E23736F3E0026880C /* InfoViewController.swift */; };
+		AC7EEEFB237C3B9300F4720C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC7EEEFA237C3B9300F4720C /* GoogleService-Info.plist */; };
 		AC7F4A212373F13900B929B5 /* Alert-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4A202373F13800B929B5 /* Alert-Ext.swift */; };
 		ACA85E3123731A2400CE088F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA85E3023731A2400CE088F /* AppDelegate.swift */; };
 		ACA85E3323731A2400CE088F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA85E3223731A2400CE088F /* SceneDelegate.swift */; };
@@ -20,8 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CE99BD45EE9881B7D4F9E07 /* Pods-AVLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVLogin.release.xcconfig"; path = "Target Support Files/Pods-AVLogin/Pods-AVLogin.release.xcconfig"; sourceTree = "<group>"; };
+		2A8C4575176A87DE3304D336 /* Pods-AVLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVLogin.debug.xcconfig"; path = "Target Support Files/Pods-AVLogin/Pods-AVLogin.debug.xcconfig"; sourceTree = "<group>"; };
+		53ADF5EDE9DEF34CCE90D139 /* Pods_AVLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC004A8C23735F980026880C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		AC004A8E23736F3E0026880C /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		AC7EEEFA237C3B9300F4720C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC7F4A202373F13800B929B5 /* Alert-Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alert-Ext.swift"; sourceTree = "<group>"; };
 		ACA85E2D23731A2400CE088F /* AVLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA85E3023731A2400CE088F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,12 +45,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36CF977879327703EBB85FCE /* Pods_AVLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		304DCE036E4837761DC5D7C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53ADF5EDE9DEF34CCE90D139 /* Pods_AVLogin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		96279AEE237C36B800911572 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +102,8 @@
 			children = (
 				ACA85E2F23731A2400CE088F /* AVLogin */,
 				ACA85E2E23731A2400CE088F /* Products */,
+				F44100DB49A15A9078F49D59 /* Pods */,
+				304DCE036E4837761DC5D7C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,8 +124,19 @@
 				96279AF1237C36F900911572 /* Extensions */,
 				ACA85E3923731A3100CE088F /* Assets.xcassets */,
 				ACA85E3E23731A3100CE088F /* Info.plist */,
+				AC7EEEFA237C3B9300F4720C /* GoogleService-Info.plist */,
 			);
 			path = AVLogin;
+			sourceTree = "<group>";
+		};
+		F44100DB49A15A9078F49D59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A8C4575176A87DE3304D336 /* Pods-AVLogin.debug.xcconfig */,
+				0CE99BD45EE9881B7D4F9E07 /* Pods-AVLogin.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACA85E4123731A3100CE088F /* Build configuration list for PBXNativeTarget "AVLogin" */;
 			buildPhases = (
+				1FD9DE70782B9F80B94EBB2C /* [CP] Check Pods Manifest.lock */,
 				ACA85E2923731A2400CE088F /* Sources */,
 				ACA85E2A23731A2400CE088F /* Frameworks */,
 				ACA85E2B23731A2400CE088F /* Resources */,
+				FBBB51540EA652A248A27A31 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,12 +200,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACA85E3D23731A3100CE088F /* LaunchScreen.storyboard in Resources */,
+				AC7EEEFB237C3B9300F4720C /* GoogleService-Info.plist in Resources */,
 				ACA85E3A23731A3100CE088F /* Assets.xcassets in Resources */,
 				ACA85E3823731A2400CE088F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FD9DE70782B9F80B94EBB2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AVLogin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBBB51540EA652A248A27A31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AVLogin/Pods-AVLogin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AVLogin/Pods-AVLogin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AVLogin/Pods-AVLogin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ACA85E2923731A2400CE088F /* Sources */ = {
@@ -330,6 +403,7 @@
 		};
 		ACA85E4223731A3100CE088F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A8C4575176A87DE3304D336 /* Pods-AVLogin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -348,6 +422,7 @@
 		};
 		ACA85E4323731A3100CE088F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CE99BD45EE9881B7D4F9E07 /* Pods-AVLogin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

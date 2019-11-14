@@ -11,6 +11,8 @@
 		96D64B83237C522E0058BF72 /* DesignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D64B82237C522E0058BF72 /* DesignButton.swift */; };
 		AC004A8D23735F980026880C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC004A8C23735F980026880C /* TableViewCell.swift */; };
 		AC004A8F23736F3E0026880C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC004A8E23736F3E0026880C /* InfoViewController.swift */; };
+		AC6ACA4F237D70C5000FB10A /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6ACA4E237D70C5000FB10A /* AppUser.swift */; };
+		AC6ACA52237D7466000FB10A /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6ACA51237D7466000FB10A /* Account.swift */; };
 		AC7EEEFB237C3B9300F4720C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC7EEEFA237C3B9300F4720C /* GoogleService-Info.plist */; };
 		AC7F4A212373F13900B929B5 /* Alert-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F4A202373F13800B929B5 /* Alert-Ext.swift */; };
 		ACA85E3123731A2400CE088F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA85E3023731A2400CE088F /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 		96D64B82237C522E0058BF72 /* DesignButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignButton.swift; sourceTree = "<group>"; };
 		AC004A8C23735F980026880C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		AC004A8E23736F3E0026880C /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		AC6ACA4E237D70C5000FB10A /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		AC6ACA51237D7466000FB10A /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		AC7EEEFA237C3B9300F4720C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC7F4A202373F13800B929B5 /* Alert-Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alert-Ext.swift"; sourceTree = "<group>"; };
 		ACA85E2D23731A2400CE088F /* AVLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,10 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				ACA85E3423731A2400CE088F /* ViewController.swift */,
+				ACBDDF70237D475B00BE20DE /* SignUpViewController.swift */,
 				ACA85E442373489F00CE088F /* TableViewController.swift */,
 				AC004A8C23735F980026880C /* TableViewCell.swift */,
 				AC004A8E23736F3E0026880C /* InfoViewController.swift */,
-				ACBDDF70237D475B00BE20DE /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -111,6 +115,15 @@
 				96D64B82237C522E0058BF72 /* DesignButton.swift */,
 			);
 			path = Designable;
+			sourceTree = "<group>";
+		};
+		AC6ACA50237D70CA000FB10A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC6ACA51237D7466000FB10A /* Account.swift */,
+				AC6ACA4E237D70C5000FB10A /* AppUser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ACA85E2423731A2400CE088F = {
@@ -136,6 +149,7 @@
 			children = (
 				96279AEE237C36B800911572 /* Delegates */,
 				96D64B84237C53EF0058BF72 /* Designable */,
+				AC6ACA50237D70CA000FB10A /* Model */,
 				96279AEF237C36E200911572 /* Views */,
 				96279AF0237C36ED00911572 /* Controllers */,
 				96279AF1237C36F900911572 /* Extensions */,
@@ -271,10 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6ACA4F237D70C5000FB10A /* AppUser.swift in Sources */,
 				ACBDDF6F237D45F700BE20DE /* Keyboard-Ext.swift in Sources */,
 				AC7F4A212373F13900B929B5 /* Alert-Ext.swift in Sources */,
 				AC004A8D23735F980026880C /* TableViewCell.swift in Sources */,
 				ACA85E3523731A2400CE088F /* ViewController.swift in Sources */,
+				AC6ACA52237D7466000FB10A /* Account.swift in Sources */,
 				ACBDDF71237D475B00BE20DE /* SignUpViewController.swift in Sources */,
 				ACA85E3123731A2400CE088F /* AppDelegate.swift in Sources */,
 				ACA85E3323731A2400CE088F /* SceneDelegate.swift in Sources */,

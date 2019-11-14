@@ -23,7 +23,8 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func exitButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        guard let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginSBID") as? ViewController else { return }
+        self.present(loginVC, animated: true, completion: nil)
     }
 
 }

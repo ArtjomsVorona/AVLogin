@@ -6,12 +6,10 @@
 //  Copyright © 2019 Artjoms Vorona. All rights reserved.
 //
 
+import Firebase
 import UIKit
 
 class ViewController: UIViewController {
-    
-    let username = "rcs"
-    let password = "swift"
     
     @IBOutlet weak var loginImageView: UIImageView!
     
@@ -21,7 +19,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setOutlets()
         setLoginImageBlur()
     }
@@ -37,15 +34,19 @@ class ViewController: UIViewController {
     
     
     @IBAction func loginButtonTapped() {
-        guard userNameTextField.text == username else {
-            basicAlert(title: "Wrong username", message: "Please enter correct username")
+        guard let email = userNameTextField.text, let password = passwordTextField.text else {
+            basicAlert(title: "Email/password error!", message: "Please enter correct loging credentials.")
             return
         }
-        guard passwordTextField.text == password else {
-            basicAlert(title: "Wrong password", message: "Please enter correct password")
-            return
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
+            if let authResult = authResult, error == nil {
+                self.goToMainVC()
+            } else {
+                self.basicAlert(title: "Authentication error!", message: error!.localizedDescription)
+            }
+            
         }
-        performSegue(withIdentifier: "Login", sender: nil)
         clearTextFields()
     }
     
@@ -71,23 +72,19 @@ class ViewController: UIViewController {
     
     
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "Login" else { return }
-        if let barViewController = segue.destination as? UITabBarController {
-            let nav = barViewController.viewControllers?[0] as! UINavigationController
-            let destinationVC = nav.viewControllers[0] as! TableViewController
-            destinationVC.username = username.capitalized
-            self.view.endEditing(true)
-        }
+    
+    func goToMainVC() {
+        guard let barViewController = storyboard?.instantiateViewController(withIdentifier: "TabBarSBID") as? UITabBarController else { return }
+        self.present(barViewController, animated: true, completion: nil)
+        self.view.endEditing(true)
     }
-}
+    
 
+    
+}//End class
+
+//MARK: Extensions
 extension ViewController: UITextFieldDelegate {
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userNameTextField {
             textField.resignFirstResponder()
@@ -98,4 +95,5 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
+
 

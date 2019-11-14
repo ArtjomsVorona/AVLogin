@@ -28,7 +28,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                         <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="0mz-nm-Vy7"/>
+                                            <outlet property="delegate" destination="jkv-b7-KCt" id="OZC-DE-XOO"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFe-dc-vhi">
@@ -39,9 +39,9 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="hy7-To-Fp3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" secureTextEntry="YES"/>
                                         <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="1fz-0Y-BWo"/>
+                                            <outlet property="delegate" destination="jkv-b7-KCt" id="UHb-BM-Mmu"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfs-Q7-B54" customClass="DesignButton" customModule="AVLogin" customModuleProvider="target">
@@ -83,7 +83,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AVLogin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginSBID" id="BYZ-38-t0r" customClass="ViewController" customModule="AVLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +155,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="8XM-hh-mod"/>
-                                    <segue destination="OMr-Qe-Trr" kind="show" id="DnB-rT-Igp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUo-fh-fW4">
@@ -237,18 +236,28 @@
         <!--Table View Controller-->
         <scene sceneID="WOm-Nj-vde">
             <objects>
-                <tableViewController modalPresentationStyle="fullScreen" id="hG6-k5-Tbg" customClass="TableViewController" customModule="AVLogin" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MainSBID" modalPresentationStyle="fullScreen" id="hG6-k5-Tbg" customClass="TableViewController" customModule="AVLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3XV-7V-KMG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.79545134309999999" green="0.85325974230000001" blue="0.87240165469999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Username!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yK6-NG-jxa">
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yK6-NG-jxa">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <color key="textColor" red="0.43917000290000002" green="0.43923890589999998" blue="0.43916058540000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4hY-NG-jTI">
+                            <rect key="frame" x="0.0" y="271.5" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <state key="normal" title="Add new account"/>
+                            <connections>
+                                <action selector="addNewAccountTapped:" destination="hG6-k5-Tbg" eventType="touchUpInside" id="fGH-6S-79m"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AccountCell" rowHeight="123" id="rGH-mw-aJS" customClass="TableViewCell" customModule="AVLogin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="130.5" width="375" height="123"/>
@@ -326,6 +335,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="accountsTableView" destination="3XV-7V-KMG" id="xOH-8T-x4y"/>
                         <outlet property="welcomeMessageLabel" destination="yK6-NG-jxa" id="jlN-DK-M9n"/>
                     </connections>
                 </tableViewController>
@@ -385,7 +395,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Dbu-zs-mj7">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="OMr-Qe-Trr" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarSBID" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="OMr-Qe-Trr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Axi-2R-Wus"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vrY-NO-gMu">
@@ -410,7 +420,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ukc-6L-Lrd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="7D3-1c-Rw5" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavSBID" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="7D3-1c-Rw5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="AccountsIcon" id="cKl-4b-ats"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="eBW-3u-OEd"/>

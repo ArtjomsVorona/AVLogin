@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		36CF977879327703EBB85FCE /* Pods_AVLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53ADF5EDE9DEF34CCE90D139 /* Pods_AVLogin.framework */; };
-		96D64B7E237C4E730058BF72 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D64B7D237C4E730058BF72 /* SignUpViewController.swift */; };
 		96D64B83237C522E0058BF72 /* DesignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D64B82237C522E0058BF72 /* DesignButton.swift */; };
 		AC004A8D23735F980026880C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC004A8C23735F980026880C /* TableViewCell.swift */; };
 		AC004A8F23736F3E0026880C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC004A8E23736F3E0026880C /* InfoViewController.swift */; };
@@ -21,13 +20,14 @@
 		ACA85E3A23731A3100CE088F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA85E3923731A3100CE088F /* Assets.xcassets */; };
 		ACA85E3D23731A3100CE088F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA85E3B23731A3100CE088F /* LaunchScreen.storyboard */; };
 		ACA85E452373489F00CE088F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA85E442373489F00CE088F /* TableViewController.swift */; };
+		ACBDDF6F237D45F700BE20DE /* Keyboard-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBDDF6E237D45F700BE20DE /* Keyboard-Ext.swift */; };
+		ACBDDF71237D475B00BE20DE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBDDF70237D475B00BE20DE /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0CE99BD45EE9881B7D4F9E07 /* Pods-AVLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVLogin.release.xcconfig"; path = "Target Support Files/Pods-AVLogin/Pods-AVLogin.release.xcconfig"; sourceTree = "<group>"; };
 		2A8C4575176A87DE3304D336 /* Pods-AVLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVLogin.debug.xcconfig"; path = "Target Support Files/Pods-AVLogin/Pods-AVLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		53ADF5EDE9DEF34CCE90D139 /* Pods_AVLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AVLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		96D64B7D237C4E730058BF72 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		96D64B82237C522E0058BF72 /* DesignButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignButton.swift; sourceTree = "<group>"; };
 		AC004A8C23735F980026880C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		AC004A8E23736F3E0026880C /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +42,8 @@
 		ACA85E3C23731A3100CE088F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACA85E3E23731A3100CE088F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACA85E442373489F00CE088F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		ACBDDF6E237D45F700BE20DE /* Keyboard-Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Keyboard-Ext.swift"; sourceTree = "<group>"; };
+		ACBDDF70237D475B00BE20DE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +91,7 @@
 				ACA85E442373489F00CE088F /* TableViewController.swift */,
 				AC004A8C23735F980026880C /* TableViewCell.swift */,
 				AC004A8E23736F3E0026880C /* InfoViewController.swift */,
-				96D64B7D237C4E730058BF72 /* SignUpViewController.swift */,
+				ACBDDF70237D475B00BE20DE /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				AC7F4A202373F13800B929B5 /* Alert-Ext.swift */,
+				ACBDDF6E237D45F700BE20DE /* Keyboard-Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -268,10 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACBDDF6F237D45F700BE20DE /* Keyboard-Ext.swift in Sources */,
 				AC7F4A212373F13900B929B5 /* Alert-Ext.swift in Sources */,
 				AC004A8D23735F980026880C /* TableViewCell.swift in Sources */,
-				96D64B7E237C4E730058BF72 /* SignUpViewController.swift in Sources */,
 				ACA85E3523731A2400CE088F /* ViewController.swift in Sources */,
+				ACBDDF71237D475B00BE20DE /* SignUpViewController.swift in Sources */,
 				ACA85E3123731A2400CE088F /* AppDelegate.swift in Sources */,
 				ACA85E3323731A2400CE088F /* SceneDelegate.swift in Sources */,
 				96D64B83237C522E0058BF72 /* DesignButton.swift in Sources */,

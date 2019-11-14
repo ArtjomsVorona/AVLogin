@@ -18,7 +18,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="gTk-HS-8Nn">
                                 <rect key="frame" x="52.5" y="123" width="270" height="198"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W5T-7p-eeo">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W5T-7p-eeo">
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -31,7 +31,7 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="0mz-nm-Vy7"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFe-dc-vhi">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFe-dc-vhi">
                                         <rect key="frame" x="0.0" y="77" width="270" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -57,6 +57,7 @@
                                         </state>
                                         <connections>
                                             <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Sc-WN-ROU"/>
+                                            <action selector="signUpButtonTapped" destination="jkv-b7-KCt" eventType="touchUpInside" id="74e-iH-aHu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -70,6 +71,10 @@
                         <viewLayoutGuide key="safeArea" id="3xn-u9-4Z8"/>
                     </view>
                     <navigationItem key="navigationItem" id="ukL-j7-HHC"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="W5T-7p-eeo" id="08B-i6-t4l"/>
+                        <outlet property="passwordTextField" destination="fFe-dc-vhi" id="TNI-hu-ffQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkx-Ph-2y4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
